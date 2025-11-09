@@ -1,0 +1,1801 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 15px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+    background-color: #ECF0F3;
+    font-family: "Montserrat", serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    float: left;
+    padding: 60px 0px 50px 0px;
+    border-bottom: 1px solid #dce1e4;
+
+}
+
+#secbnr {
+    padding: 24px 0px;
+
+}
+
+#seched {
+    width: 100%;
+    float: left;
+    padding: 0px 0px;
+    border-bottom: none;
+    background-color: #ECF0F3;
+
+}
+
+.stikey {
+    animation: scroll 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    box-shadow: 0px 0px 10px #ddd;
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+header {
+    width: 100%;
+    float: left;
+    padding: 14px 0px;
+
+}
+
+.mainheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    width: auto;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo a {
+    max-width: 140px;
+    max-height: 70px;
+    float: left;
+    overflow: hidden;
+}
+
+.logo a img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu {
+    width: auto;
+    float: right;
+
+}
+
+.menu ul {
+    width: auto;
+    display: flex;
+    gap: 40px;
+
+}
+
+.menu ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px;
+    position: relative;
+
+}
+
+.menu ul li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.4s;
+    transform-origin: center;
+
+}
+
+.menu ul li:first-child:after {
+    transform: scaleX(1);
+}
+
+.menu ul li:first-child a {
+    color: #ff014f;
+
+}
+
+.menu ul li:hover:after {
+    transform: scaleX(1);
+
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+    color: #222230;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.4s;
+
+}
+
+.menu ul li a:hover {
+    color: #ff014f;
+
+}
+
+.banner {
+    width: 100%;
+    float: left;
+}
+
+.mainbanner {
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.bannertext {
+    width: 60%;
+    float: left;
+}
+
+.mainbannertext {
+    width: 100%;
+    float: left;
+
+}
+
+.bannerimg {
+    width: 40%;
+    float: right;
+}
+
+.mainbannerimg {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+.mainbannerimg:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 315px;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    z-index: -1;
+
+}
+
+.mainbannerimg img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+
+.mainbannertext p:first-child {
+    color: #3c3e41;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+
+}
+
+.mainbannertext h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #3c3e41;
+
+}
+
+.mainbannertext p {
+    font-size: 16px;
+    text-transform: capitalize;
+    opacity: 0.9;
+    color: #3c3e41;
+    line-height: 30px;
+    margin: 20px 0px;
+    color: #3c3e41;
+    font-weight: 500;
+
+}
+
+.mainbannertext a {
+    padding: 15px 30px;
+    border: none;
+    color: #ff014f;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s;
+    float: left;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.mainbannertext a:after {
+    content: '';
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(145deg, #ff014f, #d11414);
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+.mainbannertext a:hover:after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.mainbannertext a:hover {
+    color: #fff;
+}
+
+
+.mainbannertext span {
+    color: #3c3e41;
+
+}
+
+.heading {
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+
+}
+
+.resume {
+    width: 100%;
+    float: left;
+}
+
+
+.mainresume {
+    width: 100%;
+    float: left;
+}
+
+.heading p {
+    text-align: center;
+    color: #ff014f;
+    line-height: 24px;
+
+}
+
+.heading h4 {
+    text-align: center;
+    font-size: 60px;
+    color: #3c3e41;
+    line-height: 75px;
+    text-transform: capitalize;
+}
+
+.edu-sik-box {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.edu-sik-boxleftall {
+    width: 100%;
+    display: flex;
+    gap: 70px;
+    margin-bottom: 40px;
+
+}
+
+.edu-sik-boxleft {
+    width: 50%;
+    float: left;
+}
+
+.mainedu-sik-box {
+    width: 100%;
+    float: left;
+}
+
+.edu-sik-boxright {
+    width: 50%;
+    float: right;
+}
+
+.mainedu-sik-boxright {
+    width: 100%;
+    float: right;
+}
+
+.heading.nextheading {
+    margin: 0;
+}
+
+.nextheading p {
+    text-align: left !important;
+    font-weight: 500;
+
+}
+
+.nextheading h4 {
+    text-align: left !important;
+    font-size: 35px;
+    margin: 0px;
+}
+
+.edu-sik-boxall {
+    width: 100%;
+    display: flex;
+    gap: 70px;
+    padding: 0px 10px;
+
+}
+
+.eductionboxall {
+    width: 50%;
+    float: left;
+}
+
+.eductionbox {
+    width: 100%;
+    float: left;
+    border-left: 5px solid #ddd;
+    padding-left: 35px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+
+
+.maineductionbox:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50px;
+    left: -14px;
+    background-color: #fff;
+    z-index: 1;
+    border: 6px solid #ddd;
+    border-radius: 50%;
+    transition: 0.4s;
+
+}
+
+.maineductionbox:before {
+    content: '';
+    width: 35px;
+    height: 5px;
+    position: absolute;
+    background-color: #ddd;
+    top: 60px;
+    left: 0;
+
+}
+
+
+.eduboxbftwo:after {
+    top: 359px;
+
+}
+
+.eduboxbfthree:after {
+    top: 668px;
+
+}
+
+.eduboxbftwo:before {
+    top: 369px;
+
+}
+
+.eduboxbfthree:before {
+    top: 678px;
+
+}
+
+.maineductionbox {
+    width: 100%;
+    float: left;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    transition: 0.4s;
+}
+
+.maineductionbox:hover:after {
+    background-color: #ff014f !important;
+
+}
+
+.maineductionbox:hover {
+    background: linear-gradient(145deg, #ff014f, #d11414);
+}
+
+
+
+.maineductionbox h4 {
+    font-size: 20px;
+    line-height: 39px;
+    color: #3c3e41;
+    transition: 0.4s;
+
+
+}
+
+.maineductionbox span {
+    font-size: 14px;
+    color: #3c3e41;
+    opacity: 0.8;
+    font-weight: 500;
+    line-height: 24px;
+    transition: 0.4s;
+
+}
+
+.maineductionbox P {
+    font-size: 16px;
+    text-transform: capitalize;
+    opacity: 0.8;
+    line-height: 30px;
+    margin: 30px 0px 0px 0px;
+    color: #3c3e41;
+    font-weight: 500;
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    transition: 0.4s;
+
+}
+
+.maineductionbox:hover h4 {
+    color: #fff;
+}
+
+.maineductionbox:hover p {
+    color: #fff;
+}
+
+.maineductionbox:hover span {
+    color: #fff;
+}
+
+.skills {
+    width: 100%;
+    float: left;
+}
+
+.mainskills {
+    width: 100%;
+    float: left;
+}
+
+.skillsboxall {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+.skillsonebox {
+    width: 23%;
+    float: left;
+}
+
+.mainskillsonebox {
+    width: 100%;
+    float: left;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    padding: 15px 0px;
+    border-radius: 5px;
+
+}
+
+.mainskillsonebox:hover .skillimg {
+    transform: rotateY(360deg);
+}
+
+
+.skillimg {
+    width: 80px;
+    overflow: hidden;
+    height: 80px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    transition: .9s;
+
+}
+
+
+
+.skillimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.skillstext {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+    border-top: 1px solid #ddd;
+}
+
+.skillstext h4 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #3c3e41;
+}
+
+.project {
+    width: 100%;
+    float: left;
+}
+
+.mainproject {
+    width: 100%;
+    float: left;
+}
+
+
+.projallbox {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 39px;
+
+}
+
+.projonebox {
+    width: 31%;
+    float: left;
+}
+
+.mainprojonebox {
+    width: 100%;
+    float: left;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.9s;
+
+}
+
+.mainprojonebox:hover .projboximg img {
+    transform: scale(1.2);
+
+}
+
+.projboximg {
+    width: 100%;
+    height: 160px;
+    float: left;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+
+}
+
+
+.projboximg img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    transition: 0.9s;
+
+}
+
+.projboxtext {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+
+}
+
+.projboxtext a {
+    text-decoration: none;
+    color: #3c3e41;
+    text-transform: capitalize;
+    transition: 0.4s;
+    position: relative;
+    transition: 0.4s;
+
+
+}
+
+.projboxtext a:after {
+    content: "";
+    width: 0%;
+    position: absolute;
+    bottom: -3px;
+    left: auto;
+    right: 0;
+    height: 2px;
+    background-color: #ff014f;
+    transition: 0.4s;
+
+}
+
+.projboxtext a:hover:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+
+}
+
+.projboxtext a:hover {
+    color: #ff014f;
+
+}
+
+.projboxtext p {
+    font-size: 22px;
+    color: #3c3e41;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 30px;
+    margin-top: 15px;
+
+}
+
+.contact {
+    width: 100%;
+    float: left;
+}
+
+.maincontact {
+    width: 100%;
+    float: left;
+}
+
+.cont-content {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.contimgbox {
+    width: 40%;
+    float: left;
+}
+
+.maincontimgbox {
+    width: 100%;
+    float: left;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    border-radius: 10px;
+    padding: 30px;
+
+
+}
+
+.contimg {
+    width: 100%;
+    float: left;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    height: 400px;
+
+}
+
+.contimg:hover img {
+    transform: scale(1.2);
+}
+
+.contimg img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    transition: 0.9s;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.conttext {
+    width: 100%;
+    float: left;
+}
+
+.conttext h4 {
+    font-size: 29px;
+    line-height: 44px;
+    color: #1e2125;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+
+}
+
+.conttext p {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "Poppins", serif;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #3c3e41;
+}
+
+.conttext p a {
+    text-decoration: none;
+    color: #3c3e41;
+
+}
+
+.conttext p:nth-child(4) {
+    margin-bottom: 0;
+
+}
+
+.conttext p:nth-child(4) a {
+    position: relative;
+    transition: 0.4s;
+}
+
+.conttext p:nth-child(4) a:hover {
+    color: #ff014f;
+}
+
+.conttext p:nth-child(4) a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #ff014f;
+    transform-origin: left;
+    transition: 0.4s;
+
+}
+
+.conttext p:nth-child(4) a:hover:after {
+    width: 100%;
+    left: 0;
+    right: auto;
+
+}
+
+.conttext p:nth-child(5) {
+    margin: 0px 0px;
+}
+
+.conttext p:nth-child(5) a {
+    position: relative;
+    transition: 0.4s;
+}
+
+.conttext p:nth-child(5) a:hover {
+    color: #ff014f;
+}
+
+.conttext p:nth-child(5) a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #ff014f;
+    transform-origin: left;
+    transition: 0.4s;
+
+}
+
+.conttext p:nth-child(5) a:hover:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+
+}
+
+.conttext p:last-child {
+    font-size: 15px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+}
+
+.conticon {
+    width: 100%;
+    float: left;
+}
+
+.maincontimgbox ul {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+}
+
+
+.maincontimgbox li {
+    list-style: none;
+    transition: 0.2s;
+
+}
+
+.maincontimgbox li:hover {
+    transform: translateY(-5px);
+}
+
+.maincontimgbox li a {
+    display: flex;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    color: #3c3e41;
+    border-radius: 6px;
+
+}
+
+.maincontimgbox li a i {
+    font-size: 22px;
+}
+
+.conttextbox {
+    width: 60%;
+    display: flex;
+}
+
+.mainconttextbox {
+    width: 100%;
+    float: left;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    height: 718px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.formcond {
+    width: 100%;
+    float: left;
+}
+
+.mainformcond {
+    width: 100%;
+    float: left;
+}
+
+.formcond:nth-child(1) {
+    width: 47% !important;
+    float: left;
+
+}
+
+.formcond:nth-child(1) label {
+    padding-top: 0;
+
+}
+
+.formcond:nth-child(2) label {
+    padding-top: 0;
+
+}
+
+.formcond:nth-child(2) {
+    width: 47% !important;
+    float: left;
+
+}
+
+textarea {
+    width: 100%;
+    height: 207px;
+    border: 2px solid #dadada;
+    border-radius: 5px;
+    background-color: #fdfefe;
+
+}
+
+label {
+    padding: 20px 0px;
+    float: left;
+    font-size: 13px;
+    color: #3c3e41;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.mainformcond input {
+    width: 100%;
+    padding: 10px 10px;
+    border: 2px solid #dadada;
+    border-radius: 5px;
+    background-color: #fdfefe;
+    height: 55px;
+
+}
+
+.mainformcond button {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff014f;
+    margin-top: 20px;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    font-weight: 500;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+
+.mainformcond button:hover {
+    transform: translateY(-5px);
+
+}
+
+.mainformcond button i {
+    transition: 0.2s;
+}
+
+.mainformcond button:hover i {
+    transform: translatex(10px);
+
+}
+
+:focus-visible {
+    outline-color: #ff014f;
+
+}
+
+.footer {
+    width: 100%;
+    float: left;
+}
+
+
+.mainfooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.mainfooter p {
+    width: 100%;
+    float: right;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: "Poppins", serif;
+    text-transform: capitalize;
+    color: #3c3e41;
+    text-align: center;
+
+}
+
+.mainfooter p a {
+    text-decoration: none;
+    color: #3c3e41;
+    position: relative;
+    transition: 0.4s;
+
+}
+
+
+
+.mainfooter p a:hover {
+    color: #ff014f;
+}
+
+.mainfooter p a:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: auto;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #ff014f;
+    transform-origin: left;
+    transition: 0.4s;
+
+}
+
+.mainfooter p a:hover:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+
+}
+
+#secfot {
+    padding: 10px 0px !important;
+    float: left;
+    width: 100%;
+}
+
+.menubar {
+    display: none;
+}
+
+
+.menuclose {
+    display: none;
+}
+
+.menulogo {
+    display: none;
+}
+
+@media screen and (max-width:992px) {
+
+    .skillstext h4 {
+        font-size: 14px;
+    }
+
+    .mainprojonebox {
+        padding: 10px;
+    }
+
+    .projboxtext p {
+        font-size: 20px;
+    }
+
+    .mainbannertext a {
+        padding: 14px 28px;
+        font-size: 16px;
+
+    }
+
+    section {
+        padding: 40px 0px 50px 0px;
+
+    }
+
+    .mainbanner {
+        gap: 40px;
+    }
+
+    .mainbannertext h1 {
+        font-size: 50px;
+        line-height: 80px;
+
+    }
+
+    .mainbannertext button {
+        padding: 12px 24px;
+
+    }
+
+    .heading h4 {
+        font-size: 45px;
+    }
+
+    /* .edu-sik a {
+        font-size: 20px !important;
+        padding: 25px 10px;
+
+    } */
+
+    .eduboxbftwo:before {
+        top: 369px;
+    }
+
+    .eduboxbftwo:after {
+        top: 360px;
+    }
+
+    .eduboxbfthree:before {
+        top: 702px;
+    }
+
+    .eduboxbfthree:after {
+        top: 692px;
+    }
+
+    .skillsonebox {
+        width: 22%;
+    }
+
+    .skillstext {
+        padding: 10px 0px 0px 0px;
+
+    }
+
+    .mainskillsonebox {
+        padding: 10px 0px;
+
+    }
+
+    .projonebox {
+        width: 31%;
+
+    }
+
+    .projallbox {
+        gap: 33px;
+
+    }
+
+    .formcond:nth-child(5) input {
+        height: 212px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+ 
+    .mainconttextbox{
+        padding: 12px;
+    }
+
+    .mainprojonebox  {
+        padding: 12px;
+    }
+
+    .contimg {
+        height: 810px;
+    }
+
+    .conttext p:nth-child(5) {
+        margin: 10px 0px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .conticon {
+        margin-bottom: 0px;
+    }
+
+    .mainconttextbox {
+        height: 830px;
+    }
+
+    .menuclose button {
+        box-shadow: none !important;
+    }
+
+    .edu-sik-boxall {
+        gap: 45px;
+    }
+
+    .maineductionbox {
+        padding: 12px;
+    }
+
+    .maineductionbox h4 {
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    .maineductionbox P {
+        line-height: 24px;
+        margin: 15px 0px 0px 0px;
+        padding-top: 15px;
+        font-size: 14px;
+
+    }
+
+    .projboxtext p {
+        font-size: 18px;
+    }
+
+
+    .eductionbox {
+        gap: 45px;
+
+    }
+
+    .menubar {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #3c3e41;
+        z-index: 2;
+        transition: 0.4s;
+        transform: scaleX(0);
+        transform-origin: left;
+
+
+    }
+
+    .menulogo {
+        width: auto;
+        float: left;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+
+    }
+
+    .menulogo a {
+        width: 140px;
+        float: left;
+    }
+
+    .menulogo a img {
+        width: 140px;
+
+    }
+
+    .menu ul li {
+        font-size: 16px;
+        font-family: 'Poppins';
+        color: #3c3e41;
+        padding-right: 60px;
+
+    }
+
+    .show {
+        transform: scaleX(1);
+    }
+
+    .menubar button {
+        background-color: transperant;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    .menubar button i {
+        font-size: 32px;
+        color: #ff014f;
+    }
+
+    .menuclose {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 334px;
+
+    }
+
+    .menuclose button {
+        box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+        background: linear-gradient(145deg, #e2e8ec, #ffffff);
+        border: none;
+        width: 30px;
+        border-radius: 50%;
+        height: 30px;
+        line-height: 30px;
+
+    }
+
+    .menuclose button i {
+        font-size: 15px;
+        color: #ff014f;
+    }
+
+    .menu ul {
+        width: 50%;
+        gap: 15px;
+        background: #ffffff;
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 88px;
+        padding-left: 15px;
+
+    }
+
+    .menu ul li:after {
+        display: none;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+
+    }
+
+    .mainbanner {
+        flex-direction: column-reverse;
+
+    }
+
+    .mainbannerimg:after {
+        height: 564px;
+
+    }
+
+    .bannerimg {
+        width: 100%;
+    }
+
+    .bannertext {
+        width: 100%;
+    }
+
+    .mainbannertext h1 {
+        font-size: 36px;
+        line-height: 50px;
+        max-width: 399px;
+
+    }
+
+    .mainbannertext p:first-child {
+        font-size: 12px;
+
+    }
+
+    .mainbannertext p {
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
+    .mainbannertext button {
+        margin-top: 15px;
+
+    }
+
+    .mainbannertext button {
+        font-size: 16px;
+        margin-top: 25px;
+
+    }
+
+    .heading {
+        margin-bottom: 30px;
+    }
+
+    .heading h4 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    section {
+        padding: 30px 0px 50px 0px;
+    }
+
+    .skillsonebox {
+        width: 30%;
+    }
+
+    .projallbox {
+        gap: 44px;
+    }
+
+    .projonebox {
+        width: 47%;
+    }
+
+    .cont-content {
+        flex-direction: column;
+
+    }
+
+    .contimgbox {
+        width: 100%;
+    }
+
+    .conttextbox {
+        width: 100%;
+    }
+
+    .conttext p {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+
+    }
+
+    .mainfooter p {
+        font-size: 12px;
+
+    }
+
+    .projboxtext p {
+        margin-top: 16px;
+    }
+
+    .formcond:nth-child(1) {
+        width: 100% !important;
+        float: left;
+    }
+
+    .formcond:nth-child(2) {
+        width: 100% !important;
+        float: left;
+    }
+
+    .formcond:nth-child(2) label {
+        padding-top: 20px;
+    }
+
+
+    .eduboxbftwo:before {
+        top: 269px;
+    }
+
+    .eduboxbftwo:after {
+        top: 259px;
+    }
+
+    .eduboxbfthree:before {
+        top: 498px;
+    }
+
+    .eduboxbfthree:after {
+        top: 488px;
+    }
+
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    .mainbannertext a {
+        padding: 10px 20px;
+        font-size: 14px !important;
+    }
+
+    .contimg {
+        height: 550px;
+    }
+
+    .edu-sik-boxright {
+        width: 100%;
+        position: absolute;
+        top: 576px;
+        left: 0;
+        z-index: 2;
+    }
+
+    .edu-sik-boxall {
+        gap: 82px;
+    }
+
+
+    .edu-sik-boxleft {
+        width: 100%;
+    }
+
+    .heading.nextheading {
+        margin: 0px;
+    }
+
+
+    .heading.nextheading h4 {
+        margin-bottom: 30px;
+
+    }
+
+
+    .projboximg {
+        height: 230px;
+
+    }
+
+    .mainbanner {
+        gap: 20px;
+    }
+
+    .heading h4 {
+        font-size: 24px;
+        line-height: 30px;
+
+    }
+
+    .mainbannertext h1 {
+        font-size: 36px;
+        line-height: 50px;
+
+    }
+
+    .mainbannertext p {
+        margin: 10px 0px 5px 0px;
+    }
+
+    .mainbannertext button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .menuclose {
+        left: auto;
+        right: 15px;
+    }
+
+    .mainbannerimg:after {
+        height: 417px;
+    }
+
+    .edu-sik-boxall {
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+    }
+
+    .eductionboxall {
+        width: 100%;
+    }
+
+    .eduboxbftwo:before {
+        top: 430px;
+    }
+
+    .eduboxbftwo:after {
+        top: 420px;
+    }
+
+    .eduboxbfthree:before {
+        top: 798px;
+    }
+
+    .eduboxbfthree:after {
+        top: 788px;
+    }
+
+    .skillstext h4 {
+        font-size: 14px;
+
+    }
+
+    .skillsonebox {
+        width: 48%;
+    }
+
+    .mainskillsonebox {
+        margin-bottom: 20px;
+    }
+
+    .skillsboxall {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .projallbox {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .projonebox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .maincontimgbox ul {
+        gap: 10px;
+    }
+
+    .projboxtext h4 {
+        font-size: 20px;
+    }
+
+    .conttext h4 {
+        font-size: 20px;
+        line-height: 24px;
+
+    }
+
+    .conttext p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 0px;
+        margin-top: 12px;
+
+    }
+
+    .conttext p:last-child {
+        font-size: 12px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .mainprojonebox {
+        padding: 12px;
+    }
+
+    .maincontimgbox {
+        padding: 20px;
+    }
+
+    .maincontimgbox li a {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .maincontimgbox li a i {
+        font-size: 18px;
+    }
+
+    .mainconttextbox {
+        padding: 20px;
+        height: 611px;
+
+    }
+
+    label {
+        padding: 10px 0px;
+        font-size: 12px;
+    }
+
+    .mainformcond input {
+        height: 45px;
+    }
+
+    textarea {
+        height: 150px;
+
+    }
+
+    .mainformcond button {
+        padding: 15px 10px;
+        margin-top: 15px;
+
+    }
+
+    .logo a {
+        max-width: 120px;
+        max-height: 70px;
+    }
+
+    .mainfooter p {
+        font-size: 10px;
+    }
+
+    .maineductionbox {
+        padding: 20px;
+    }
+
+    .maineductionbox h4 {
+        font-size: 20px;
+        line-height: 24px;
+
+    }
+
+    .maineductionbox P {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 15px 0px 0px 0px;
+        padding-top: 15px;
+
+    }
+
+    .edu-sik-boxleftall {
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    .eductionbox {
+        border-left: 0;
+        padding-left: 0;
+        gap: 20px;
+    }
+
+    .maineductionbox:before {
+        display: none;
+    }
+
+    .maineductionbox:after {
+        display: none;
+    }
+
+    section {
+        padding: 30px 0px 40px 0px;
+    }
+
+    .projboxtext p {
+        margin-top: 14px;
+    }
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .menu ul li {
+        font-size: 12px;
+        padding-right: 15px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+    }
+
+}
